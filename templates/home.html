@@ -1,0 +1,38 @@
+<!-- """
+ * FILENAME: [Lab 8: Security and Cipher Tools]
+ * AUTHOR: [Holly Williams]
+ * COURSE: [SDEV 300]
+ * PROFESSOR: [Justin Boswell]
+ * CREATEDATE: [May 9, 2023]
+
+""" -->
+
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block content %}
+<html>
+<body>
+
+  <!-- page header -->
+  <h2 align="center">Welcome to the Pug Club!</h2><br>
+
+  <!-- date and time-->
+  <!-- h5 -->
+  <h5 align="center">The current date and time is </h5>
+  <p align="center" id="demo"></p>
+  <script align="center">
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d;
+  </script>
+
+  <!-- image -->
+  <p align="center"><img src="{{url_for('static', filename='pug-doodle.png')}}" alt="pug-doodle" width="400" height="400"></p>
+
+</body>
+</html>
+{% endblock %}

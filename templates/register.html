@@ -1,0 +1,60 @@
+<!-- """
+ * FILENAME: [Lab 8: Security and Cipher Tools]
+ * AUTHOR: [Holly Williams]
+ * COURSE: [SDEV 300]
+ * PROFESSOR: [Justin Boswell]
+ * CREATEDATE: [May 9, 2023]
+
+""" -->
+
+<!doctype html>
+{% extends "login_base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The Title is expected to override, put a placeholder here -->
+    <title>Registration Page</title>
+
+</head>
+
+<body id="reg">
+    <!-- Title of the page -->
+    <div class="container">
+        <h1>Register</h1>
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif%}
+
+            <!-- Form to register -->
+            <form action="" method="post">
+                <table class="logtable">
+                    <tr>
+                        <th class="lghead"><label for="username">Username</label></th>
+                        <td class="lgrow"><input name="username" value="{{
+                        request.form.username }}" id="username"></td>
+                    </tr>
+                    <tr>
+                        <th class="lghead"><label for="password">Password</label></th>
+                        <td class="lgrow"><input type="password" name="password" value="{{
+                        request.form.password }}" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td class="lgrow" colspan='2'><input type="submit" value="Register"></td>
+                    </tr>
+                    <caption class="reglink">Have an account? <a href="{{ url_for('login') }}">Login!</a></caption>
+                </table>
+
+            </form>
+    </div>
+</body>
+
+</html>
+{% endblock %}

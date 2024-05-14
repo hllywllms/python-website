@@ -1,0 +1,85 @@
+<!-- """
+ * FILENAME: [Lab 8: Security and Cipher Tools]
+ * AUTHOR: [Holly Williams]
+ * COURSE: [SDEV 300]
+ * PROFESSOR: [Justin Boswell]
+ * CREATEDATE: [May 9, 2023]
+
+""" -->
+
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block content %}
+<html>
+
+   <!-- styling table -->
+   <style>
+   td, th {
+      border: 1px solid #000000;
+      padding: 8px;
+   }
+
+   #table1 {
+      border-collapse: collapse;
+   }
+   </style>
+
+<!-- body -->
+<body>
+
+  <!-- page heading -->
+  <h2 align="center">Pug Health</h2><br>
+
+  <!-- image -->
+  <img src="{{url_for('static', filename='pug-health.png')}}"alt="pug-health" height="440"><br><br>
+
+   <!-- add table to the page -->
+   <!-- table header-->
+   <h3>Adult Size Chart</h3>
+   <table id="table1">
+    <tr><!-- tr: table rows --> 
+      <th>Weight Class</th><!-- th: table headings-->
+      <th>Rib Visibility</th>
+      <th>Waistline</th>
+      <th>Abdomen</th>
+    </tr>               
+    <tr>
+      <td>Extremely Thin</td><!-- td: table data -->
+      <td>Visible from a distance</td>
+      <td>Exaggerated waistline</td>
+      <td>Loss of muscle mass</td>
+    </tr>
+    <tr>
+      <td>Thin</td>
+      <td>May be visible</td>
+      <td>Obvious waistline</td>
+      <td>Evident abdoninal tuck</td>
+    </tr>
+    <tr>
+        <td>Ideal</td>
+        <td>Easily felt with minimal fat</td>
+        <td>Neat waistline</td>
+        <td>Abdoninal tucked up</td>
+      </tr>
+      <tr>
+        <td>Overweight</td>
+        <td>Not easily palpable</td>
+        <td>No waistline</td>
+        <td>Distension</td>
+      </tr>
+      <tr>
+        <td>Obese</td>
+        <td>Unable to feel</td>
+        <td>Massive fat deposits</td>
+        <td>Massive distension</td>
+      </tr>
+    </table>
+
+</body>
+</html>
+{% endblock %}
